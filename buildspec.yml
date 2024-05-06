@@ -8,6 +8,3 @@ phases:
     commands:
       - echo Build started on `date`
       - dotnet publish -c release -o ./build_output WebApplication1/WebApplication1.csproj
-artifacts:
-  files:
-    - build_output/**/*

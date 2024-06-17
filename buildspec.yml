@@ -1,10 +1,27 @@
 version: 0.2
-phases:
+    
+phases:   
+  install:
+    runtime-versions:
+      dotnet: latest
+      
   pre_build:
     commands:
-      - echo Restore started on `date`
+      - echo Restore started on 'date'
       - dotnet restore WebApplication1/WebApplication1.csproj
+      
   build:
     commands:
-      - echo Build started on `date`
-      - dotnet publish -c release -o ./build_output WebApplication1/WebApplication1.csproj
+      - echo Build started on 'date'
+      - dotnet build WebApplication1/WebApplication1.csproj
+      
+  post_build:
+    commands:
+      - echo Publish started on 'date'
+      - dotnet publish -c Release -r linux-x64 --self-contained false WebApplication1/WebApplication1.csproj
+      
+artifacts:
+  files:
+    - '**/*'
+  base-directory: ./bin/Release/netcoreapp3.1/linux-x64/publish/
+  discard-paths: no

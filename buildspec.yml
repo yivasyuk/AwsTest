@@ -15,9 +15,10 @@ phases:
     on-failure: ABORT
     commands:
       - echo Publish started on 'date'
-      - dotnet publish -c Release --framework netcoreapp3.1 --runtime linux-x64 --output publish WebApplication1/WebApplication1.csproj
+      - dotnet publish -c Release --framework netcoreapp3.1 --runtime linux-x64 --output app WebApplication1/WebApplication1.csproj
 
 artifacts:
   files:
-    - 'publish/**/*'
+    - 'app/**/*'
     - 'appspec.yml'
+  base-directory: 'app'

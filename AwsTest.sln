@@ -6,11 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{56760498-766C-4316-AA19-3B19C6D4A88D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{95E77663-B51A-4967-9478-130E17BD3DD3}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy-scripts", "deploy-scripts", "{0B0A1901-8036-4C12-BF19-26B988AFE3EE}"
 	ProjectSection(SolutionItems) = preProject
-		deploy-scripts\appspec.yml = deploy-scripts\appspec.yml
-		deploy-scripts\buildspec.yml = deploy-scripts\buildspec.yml
+		appspec.yml = appspec.yml
+		buildspec.yml = buildspec.yml
 	EndProjectSection
 EndProject
 Global
@@ -26,9 +24,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{0B0A1901-8036-4C12-BF19-26B988AFE3EE} = {95E77663-B51A-4967-9478-130E17BD3DD3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F867A287-C48D-4D4B-8F20-BC34F64ADCEF}

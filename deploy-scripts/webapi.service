@@ -1,0 +1,13 @@
+[Unit]
+Description=.NET Core server Dev
+
+[Service]
+WorkingDirectory=/home/ubuntu/test/
+ExecStart=/usr/bin/dotnet /home/ubuntu/test/WebApplication1.dll --urls=http://localhost:5001
+Restart=always
+RestartSec=10 # Restart service after 10 seconds if dotnet service crashes
+SyslogIdentifier=CORE_APP
+Environment=ASPNETCORE_ENVIRONMENT=qa
+
+[Install]
+WantedBy=multi-user.target

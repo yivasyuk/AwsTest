@@ -4,3 +4,19 @@ os: linux
 files: 
   - source: app
     destination: /home/ubuntu/test
+  - source: deploy-scripts/webapi.service
+    destination: /etc/systemd/system
+hooks:
+    BeforeInstall:
+      - location: deploy-scripts/before_install.sh
+        timeout: 120
+        runas: root
+    ApplicationStop:
+      - location: deploy-scripts/application_stop.sh
+        timeout: 120
+        runas: root
+    ApplicationStart:
+      - location: deploy-scripts/application_start.sh
+        timeout: 120
+        runas: root
+  

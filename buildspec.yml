@@ -21,4 +21,3 @@ artifacts:
   files:
     - 'app/**/*'
     - 'appspec.yml'
-  base-directory: 'app'

@@ -5,7 +5,6 @@ phases:
     commands:
       - curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 8.0  
 
-
   pre_build:
     on-failure: ABORT
     commands:
@@ -17,3 +16,8 @@ phases:
     commands:
       - echo Publish started on 'date'
       - dotnet publish -c Release --framework netcoreapp3.1 --runtime linux-x64 --output publish src/WebApplication1/WebApplication1.csproj
+
+  artifacts:
+  files:
+    - '**/*'
+  base-directory: 'publish'

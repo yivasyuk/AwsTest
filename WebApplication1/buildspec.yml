@@ -1,0 +1,19 @@
+version: 0.2
+    
+phases:
+  install:
+    commands:
+      - curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 8.0  
+
+
+  pre_build:
+    on-failure: ABORT
+    commands:
+      - echo Restore started on 'date'
+      - dotnet restore AwsTest.sln
+      
+  build:
+    on-failure: ABORT
+    commands:
+      - echo Publish started on 'date'
+      - dotnet publish -c Release --framework netcoreapp3.1 --runtime linux-x64 --output publish src/WebApplication1/WebApplication1.csproj

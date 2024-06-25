@@ -18,6 +18,6 @@ phases:
       - dotnet publish -c Release --framework netcoreapp3.1 --runtime linux-x64 --output publish src/WebApplication1/WebApplication1.csproj
 
   artifacts:
-  files:
-    - '**/*'
-  base-directory: 'publish'
+    files:
+        - '**/*'
+    base-directory: 'publish'

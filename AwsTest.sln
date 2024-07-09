@@ -11,6 +11,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		buildspec.yml = buildspec.yml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy-scripts", "deploy-scripts", "{3B695378-BC99-4A4F-8FAD-D817E26A2BD7}"
+	ProjectSection(SolutionItems) = preProject
+		deploy-scripts\application_start.sh = deploy-scripts\application_start.sh
+		deploy-scripts\application_stop.sh = deploy-scripts\application_stop.sh
+		deploy-scripts\before_install.sh = deploy-scripts\before_install.sh
+		deploy-scripts\webapi.service = deploy-scripts\webapi.service
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +32,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3B695378-BC99-4A4F-8FAD-D817E26A2BD7} = {95E77663-B51A-4967-9478-130E17BD3DD3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F867A287-C48D-4D4B-8F20-BC34F64ADCEF}

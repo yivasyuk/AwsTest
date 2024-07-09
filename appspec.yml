@@ -4,7 +4,7 @@ os: linux
 files: 
   - source: app
     destination: /home/ubuntu/test
-  - source: deploy-scripts/webapi.service
+  - source: deploy-scripts/*.service
     destination: /etc/systemd/system
 hooks:
     BeforeInstall:
